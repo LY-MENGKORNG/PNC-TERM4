@@ -1,7 +1,7 @@
 <template>
     <div class="d-flex flex-column">
         <h3>Method</h3>
-        <p>{{ message }}</p>
+        <p :style="isOpen ? {visibility: 'hidden'} : {visibility: ''} " >Hello world</p>
         <button type="button" @click="toggleText" class="btn btn-primary" >Toggle message</button>
     </div>
 </template>
@@ -11,14 +11,12 @@ export default {
     name: 'MethodForm',
     data() {
         return {
-            message: ""
+            isOpen: false,
         }
     },
     methods: {
         toggleText() {
-            let text = this.message;
-            text == "" ? text = "Hello world" : text = ""
-            this.message = text
+            this.isOpen = !this.isOpen
         }
     },
 }
