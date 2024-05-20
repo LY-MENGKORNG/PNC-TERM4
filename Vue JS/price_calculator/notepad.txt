@@ -1,0 +1,5 @@
++ How to install Bootstrap  
+    npm i bootstrap@latest
+    + Inside of the main.js: 
+        import "bootstrap";
+        import "bootstrap/dist/css/bootstrap.css";

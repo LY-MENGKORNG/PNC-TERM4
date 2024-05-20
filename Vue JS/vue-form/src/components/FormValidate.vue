@@ -13,10 +13,10 @@
             <p class="text-danger pb-2">{{ passwordValidate }}</p>
         </div>
         <div class="col-12">
-            <button type="button" class="btn btn-success col-12" data-toggle="modal" :data-target="target" >Submit</button>
+            <button type="button" class="btn btn-success col-12" data-bs-toggle="modal" :data-bs-target="'#'+target" >Submit</button>
         </div>
     </form>
-    <FormModal :aria-labelledby="target+ 'Example'" :id="target" />
+    <FormModal :aria-labelledby="target+ 'Example'" :id="target" :name="name" :age="age" />
 </template>
 
 <script>
@@ -34,7 +34,7 @@ export default {
             nameValidate: '',
             ageValidate: '',
             passwordValidate: '',
-            target: "#validate"
+            target: "validate"
         }
     },
     watch: {
